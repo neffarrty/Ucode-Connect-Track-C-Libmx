@@ -1,0 +1,27 @@
+CC = clang
+CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
+
+TARGET = libmx.a
+
+OBJ_DIR = obj
+SRC_DIR = src
+
+all: $(TARGET)
+	
+$(TARGET):	
+	mkdir obj/
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/*.c
+	mv *.o $(OBJ_DIR)
+	ar rcs $(TARGET) $(OBJ_DIR)/*.o
+
+clean:
+	rm -rf $(OBJ_DIR)
+
+uninstall:
+	rm -f $(TARGET)
+
+reinstall: 
+	make clean 
+	make uninstall
+	make all
+
