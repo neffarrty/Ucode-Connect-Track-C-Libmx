@@ -6,7 +6,18 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <fcntl.h>
-#include <malloc.h>
+
+#ifdef __MACH__
+
+	#include <malloc/malloc.h>
+
+#else
+
+	#include <malloc.h>
+
+	#define malloc_size malloc_usable_size
+
+#endif
 
 // UTILS PACK
 
