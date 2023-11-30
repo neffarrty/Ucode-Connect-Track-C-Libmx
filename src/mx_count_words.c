@@ -16,12 +16,14 @@ int mx_count_words(const char *str, char delimiter) {
 		}
 		start++;
 	}
+
 	for(int i = end; i >= 0; i--) {
 		if(str[i] != delimiter) {
 			break;
 		}
 		end--;
 	}
+	
 	for(int i = start; i <= end; i++) {
 		if(str[i] == delimiter && str[i + 1] == delimiter) {
 			continue;

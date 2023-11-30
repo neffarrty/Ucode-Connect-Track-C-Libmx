@@ -1,8 +1,7 @@
 #include "libmx.h"
 
 char *mx_strtrim(const char *str) {
-    char *tmp = mx_strnew(mx_strlen(str));
-    tmp = mx_strncpy(tmp, str, mx_strlen(str));
+    char *tmp = mx_strdup(str);
     int start = 0;
     int end = mx_strlen(str) - 1;
 
@@ -15,7 +14,6 @@ char *mx_strtrim(const char *str) {
 
     char *result = mx_strnew(end - start + 1);
     int j = 0;
-
     for (int i = start; i <= end; i++) {
         result[j] = tmp[i];
         j++;

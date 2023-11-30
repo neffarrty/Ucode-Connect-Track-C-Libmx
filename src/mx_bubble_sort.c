@@ -2,13 +2,13 @@
 
 int mx_bubble_sort(char **arr, int size) {
 	int count_swap = 0;
-	int isSorted = 0;
+	int is_sorted = 0;
 	
-	while(!isSorted) {
-		isSorted = 1;
+	while(!is_sorted) {
+		is_sorted = 1;
 		for(int i = 0; i < size - 1; i++) {
 			if(mx_strcmp(arr[i], arr[i + 1]) > 0) {
-				isSorted = 0;
+				is_sorted = 0;
 				count_swap++;
 				
 				char *buff = arr[i];

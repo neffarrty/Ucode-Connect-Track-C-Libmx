@@ -4,10 +4,11 @@ char *mx_itoa(int number) {
     char *result = NULL;
     int size = 0;
     int temp = number;
-     if (number < 0) {
+    if (number < 0) {
         size++;
         temp *= -1;
     }
+    
     if (number == 0) {
         result = mx_strnew(1);
         result[0] = '0';
@@ -15,15 +16,17 @@ char *mx_itoa(int number) {
     }
     while (temp) {
         size++;
-	temp /= 10;
+	    temp /= 10;
     }
     result = mx_strnew(size);
+
     if (number < 0) {
         number *= -1;
         result[0] = '-';
     }
     result[size] = '\0';
     size--;
+
     while (number != 0 && size >= 0) {
         if(result[size] == '-') {
             break;
@@ -32,6 +35,7 @@ char *mx_itoa(int number) {
         size--;
         number /= 10;
     }
+
     return result;
 }
 

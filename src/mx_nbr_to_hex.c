@@ -2,10 +2,10 @@
 
 char *mx_nbr_to_hex(unsigned long nbr) {
 	if(nbr == 0) {
-        	char * hex_number = (char*)malloc(1);
-        	hex_number[0] = '0';
-        	return hex_number;
-    	}
+		char * hex_number = (char*)malloc(1);
+		hex_number[0] = '0';
+		return hex_number;
+    }
 	
 	unsigned long start = nbr;
 	int number_of_digits = 0;
@@ -45,6 +45,7 @@ char *mx_nbr_to_hex(unsigned long nbr) {
 		nbr /= 16;
 		counter--;
 	}
+	
 	return hex_number;
 }
 

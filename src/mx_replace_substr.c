@@ -6,7 +6,6 @@ char *mx_replace_substr(const char *str, const char *sub, const char *replace) {
     }
 
     int size = mx_strlen(str) - mx_count_substr(str, sub) * (mx_strlen(sub) - mx_strlen(replace));
-
     char *temp = mx_strdup(str);
     char *result = (char*)malloc(size + 1);
 

@@ -23,9 +23,11 @@ char *mx_file_to_str (const char *filename) {
     if (fd < 0) {
         return NULL;
     }
+
     for (int i = 0; read (fd, &temp, 1) > 0; i++) {
         res[i] = temp;
     }
+    
     if (close (fd) != 0) {
         return NULL;
     }
