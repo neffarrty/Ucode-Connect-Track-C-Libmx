@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_strcat(char *restrict s1, const char *restrict s2) {
 	char* ptr = s1 + mx_strlen(s1);

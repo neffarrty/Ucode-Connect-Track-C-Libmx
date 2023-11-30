@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 void mx_print_unicode(wchar_t c) {
     char str[5] = {'\0', '\0', '\0', '\0', '\0'};

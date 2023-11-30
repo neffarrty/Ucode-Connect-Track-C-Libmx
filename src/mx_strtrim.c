@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_strtrim(const char *str) {
     char *tmp = mx_strnew(mx_strlen(str));

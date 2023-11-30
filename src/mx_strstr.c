@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_strstr(const char *s1, const char *s2) {
 	while (*s1 != '\0') {
